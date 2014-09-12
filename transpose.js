@@ -1,3 +1,9 @@
+/* Based on 
+LaTeX table transpose
+Peter Raffensperger
+9 Jan 2012
+*/
+
 
 function tableTranspose(tableStr){
   tableStr = tableStr.replace(/\\hline/g, '')
@@ -16,7 +22,7 @@ function tableTranspose(tableStr){
   }
 
   var tNew = "\\begin{tabular}{";
-  for(var i=0; i<maxCols; i++){
+  for(var i=0; i<table.length; i++){
     tNew += " c ";
   }
   tNew += "}\n";
